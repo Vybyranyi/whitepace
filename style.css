@@ -116,6 +116,183 @@ header {
 /* customise */
 
 /* choose-plan */
+.choose-plan {
+    padding: 40px 0 60px;
+}
+
+.choose-plan-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.choose-plan-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #212529;
+    margin-bottom: 12px;
+}
+
+.underline-yellow {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.underline-yellow::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 10px;
+    background: #FFE492;
+    border-radius: 4px;
+    z-index: -1;
+}
+
+.choose-plan-description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #212529;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.plans-wrapper {
+    overflow: hidden;
+}
+
+.plans-track {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.plan-card {
+    min-width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-card--featured {
+    background-color: #043873;
+    color: #fff;
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.16);
+}
+
+.plan-card--light {
+    background-color: #fff;
+    color: #212529;
+    border: 1px solid #FFE492;
+}
+
+.plan-text-block {
+    margin-bottom: 25px;
+}
+
+.plan-name {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+
+.plan-price {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.plan-card--featured .plan-price {
+    color: #FFE492;
+}
+
+.plan-card--light .plan-price {
+    color: #212529;
+}
+
+.plan-tagline {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+}
+
+.plan-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+}
+
+.check-icon {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+}
+
+.plan-btn {
+    width: 166px;
+    height: 51px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+    cursor: pointer;
+    align-self: flex-start;
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+.plan-btn--featured {
+    background-color: #4F9CF9;
+    color: #fff;
+    border: none;
+}
+
+.plan-btn--outline {
+    background-color: transparent;
+    color: #043873;
+    border: 1px solid #FFE492;
+}
+
+.plans-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #043873;
+}
 
 /* work-everywere */
 
@@ -131,7 +308,7 @@ header {
 
 /* footer */
 
-@media (min-width: 1152px) {
+@media (min-width: 768px) {
     .container {
         margin: 0 2rem;
     }
@@ -150,12 +327,12 @@ header {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 145px 0;
+        padding: 100px 0;
     }
 
     .main-banner-title {
-        font-size: 64px;
-        line-height: 77px;
+        font-size: 54px;
+        line-height: 65px;
         text-align: left;
     }
 
@@ -165,7 +342,7 @@ header {
 
     .main-banner-content-left {
         align-items: flex-start;
-        margin-bottom: none;
+        margin-bottom: 0;
     }
 
     /* project-management */
@@ -177,6 +354,110 @@ header {
     /* customise */
 
     /* choose-plan */
+    .choose-plan {
+        padding: 80px 0 100px;
+    }
+
+    .choose-plan-header {
+        margin-bottom: 64px;
+    }
+
+    .choose-plan-title {
+        font-size: 54px;
+        line-height: 64px;
+    }
+
+    .choose-plan-description {
+        font-size: 16px;
+        line-height: 28px;
+        max-width: 620px;
+    }
+
+    .plans-wrapper {
+        overflow: visible;
+    }
+
+    .plans-track {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        align-items: center;
+        transform: none !important;
+    }
+
+    .plan-card {
+        min-width: auto;
+        border-radius: 10px;
+        padding: 40px clamp(16px, 3vw, 44px);
+    }
+
+    /* Free & Organization: 341.33 Fill x 697 Hug on tablet */
+    .plan-card--light {
+        border: 1px solid #FFE492;
+        background-color: #fff;
+    }
+
+    /* Personal: 341.33 Fill x 853 Hug on tablet */
+    .plan-card--featured {
+        padding: 80px clamp(16px, 3vw, 44px);
+        position: relative;
+        z-index: 1;
+        box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.16);
+    }
+
+    .plan-text-block {
+        margin-bottom: 25px;
+    }
+
+    .plan-name {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+    }
+
+    .plan-price {
+        font-size: 36px;
+        line-height: 100%;
+    }
+
+    .plan-tagline {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    /* Bullet-point: gap: 28px */
+    .plan-features {
+        gap: 28px;
+    }
+
+    .plan-features li {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+    }
+
+    .check-icon {
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+    }
+
+    /* Btn-get-started: 166 Hug x 51 Hug, padding: 16 40 16 40, radius: 8px, border: 1px */
+    .plan-btn {
+        padding: 16px 40px;
+    }
+
+    .plan-btn--outline {
+        border: 1px solid #FFE492;
+        color: #043873;
+    }
+
+    .plans-dots {
+        display: none;
+    }
 
     /* work-everywere */
 
@@ -219,6 +500,110 @@ header {
     /* customise */
 
     /* choose-plan */
+    .choose-plan {
+        padding: 80px 0 100px;
+    }
+
+    .choose-plan-header {
+        margin-bottom: 64px;
+    }
+
+    .choose-plan-title {
+        font-size: 54px;
+        line-height: 64px;
+    }
+
+    .choose-plan-description {
+        font-size: 16px;
+        line-height: 28px;
+        max-width: 620px;
+    }
+
+    .plans-wrapper {
+        overflow: visible;
+    }
+
+    .plans-track {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        align-items: center;
+        transform: none !important;
+    }
+
+    .plan-card {
+        min-width: auto;
+        border-radius: 10px;
+        padding: 40px 44px;
+    }
+
+    /* Free & Organization: 341.33 Fill x 697 Hug on tablet */
+    .plan-card--light {
+        border: 1px solid #FFE492;
+        background-color: #fff;
+    }
+
+    /* Personal: 341.33 Fill x 853 Hug on tablet */
+    .plan-card--featured {
+        padding: 80px 44px;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.16);
+    }
+
+    .plan-text-block {
+        margin-bottom: 25px;
+    }
+
+    .plan-name {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+    }
+
+    .plan-price {
+        font-size: 36px;
+        line-height: 100%;
+    }
+
+    .plan-tagline {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    /* Bullet-point: gap: 28px */
+    .plan-features {
+        gap: 28px;
+    }
+
+    .plan-features li {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+    }
+
+    .check-icon {
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+    }
+
+    /* Btn-get-started: 166 Hug x 51 Hug, padding: 16 40 16 40, radius: 8px, border: 1px */
+    .plan-btn {
+        padding: 16px 40px;
+    }
+
+    .plan-btn--outline {
+        border: 1px solid #FFE492;
+        color: #043873;
+    }
+
+    .plans-dots {
+        display: none;
+    }
 
     /* work-everywere */
 
