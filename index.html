@@ -68,7 +68,79 @@
 
         <section class="customise"></section>
 
-        <section class="choose-plan"></section>
+        <section class="choose-plan">
+            <div class="container">
+                <div class="choose-plan-header">
+                    <h2 class="choose-plan-title">Choose Your <span class="underline-yellow">Plan</span></h2>
+                    <p class="choose-plan-description">Whether you want to get organized, keep your personal life on track, or boost workplace productivity, Evernote has the right plan for you.</p>
+                </div>
+
+                <div class="plans-wrapper">
+                    <div class="plans-track">
+                        <!-- Free -->
+                        <div class="plan-card plan-card--light">
+                            <div class="plan-text-block">
+                                <h3 class="plan-name">Free</h3>
+                                <p class="plan-price">$0</p>
+                                <p class="plan-tagline">Capture ideas and find them quickly</p>
+                            </div>
+                            <ul class="plan-features">
+                                <li><img class="check-icon" src="assets/Icon 2.png" alt="check">Sync unlimited devices</li>
+                                <li><img class="check-icon" src="assets/Icon 2.png" alt="check">10 GB monthly uploads</li>
+                                <li><img class="check-icon" src="assets/Icon 2.png" alt="check">200 MB max. note size</li>
+                                <li><img class="check-icon" src="assets/Icon 2.png" alt="check">Customize Home dashboard and access extra widgets</li>
+                                <li><img class="check-icon" src="assets/Icon 2.png" alt="check">Connect primary Google Calendar account</li>
+                                <li><img class="check-icon" src="assets/Icon 2.png" alt="check">Add due dates, reminders, and notifications to your tasks</li>
+                            </ul>
+                            <button class="plan-btn plan-btn--outline">Get Started</button>
+                        </div>
+
+                        <!-- Personal -->
+                        <div class="plan-card plan-card--featured">
+                            <div class="plan-text-block">
+                                <h3 class="plan-name">Personal</h3>
+                                <p class="plan-price">$11.99</p>
+                                <p class="plan-tagline">Keep home and family on track</p>
+                            </div>
+                            <ul class="plan-features">
+                                <li><img class="check-icon" src="assets/Icon.png" alt="check">Sync unlimited devices</li>
+                                <li><img class="check-icon" src="assets/Icon.png" alt="check">10 GB monthly uploads</li>
+                                <li><img class="check-icon" src="assets/Icon.png" alt="check">200 MB max. note size</li>
+                                <li><img class="check-icon" src="assets/Icon.png" alt="check">Customize Home dashboard and access extra widgets</li>
+                                <li><img class="check-icon" src="assets/Icon.png" alt="check">Connect primary Google Calendar account</li>
+                                <li><img class="check-icon" src="assets/Icon.png" alt="check">Add due dates, reminders, and notifications to your tasks</li>
+                            </ul>
+                            <button class="plan-btn plan-btn--featured">Get Started</button>
+                        </div>
+
+                        <!-- Organization -->
+                        <div class="plan-card plan-card--light plan-card--org">
+                            <div class="plan-text-block">
+                                <h3 class="plan-name">Organization</h3>
+                                <p class="plan-price">$49.99</p>
+                                <p class="plan-tagline">Capture ideas and find them quickly</p>
+                            </div>
+                            <ul class="plan-features">
+                                <li><img class="check-icon" src="assets/Icon 2.png" alt="check">Sync unlimited devices</li>
+                                <li><img class="check-icon" src="assets/Icon 2.png" alt="check">10 GB monthly uploads</li>
+                                <li><img class="check-icon" src="assets/Icon 2.png" alt="check">200 MB max. note size</li>
+                                <li><img class="check-icon" src="assets/Icon 2.png" alt="check">Customize Home dashboard and access extra widgets</li>
+                                <li><img class="check-icon" src="assets/Icon 2.png" alt="check">Connect primary Google Calendar account</li>
+                                <li><img class="check-icon" src="assets/Icon 2.png" alt="check">Add due dates, reminders, and notifications to your tasks</li>
+                            </ul>
+                            <button class="plan-btn plan-btn--outline">Get Started</button>
+                        </div>
+                    </div>
+
+                    <!-- Dot indicators (mobile only) -->
+                    <div class="plans-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="work-everywere"></section>
 
@@ -174,6 +246,37 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile plans carousel
+        (function () {
+            const track = document.querySelector('.plans-track');
+            const dots = document.querySelectorAll('.plans-dots .dot');
+            let current = 0;
+            const total = 3;
+
+            function goTo(index) {
+                current = index;
+                track.style.transform = 'translateX(-' + (current * 100) + '%)';
+                dots.forEach((d, i) => d.classList.toggle('active', i === current));
+            }
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => goTo(i));
+            });
+
+            // Touch swipe support
+            let startX = 0;
+            track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+            track.addEventListener('touchend', e => {
+                const diff = startX - e.changedTouches[0].clientX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0 && current < total - 1) goTo(current + 1);
+                    else if (diff < 0 && current > 0) goTo(current - 1);
+                }
+            });
+        })();
+    </script>
 </body>
 
 </html>
