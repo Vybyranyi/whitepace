@@ -375,8 +375,116 @@ header {
 text-align: center;
 }
 /* your-data */
+.your-data {
+    padding: 64px 0;
+}
+
+.your-data-inner,
+.sponsors-inner {
+    width: calc(100% - 3rem);
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.your-data-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.your-data-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.your-data-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #212529;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.your-data-description {
+    max-width: 520px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #212529;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.your-data-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4F9CF9;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.your-data-btn svg {
+    flex-shrink: 0;
+}
+
+.your-data-img {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+}
 
 /* sponsors */
+.sponsors {
+    padding-bottom: 64px;
+}
+
+.sponsors-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #212529;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sponsors-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: 32px 24px;
+}
+
+.sponsors-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.sponsors-logo-apple {
+    width: 36px;
+}
+
+.sponsors-logo-microsoft {
+    width: 156px;
+}
+
+.sponsors-logo-slack {
+    width: 148px;
+}
+
+.sponsors-logo-google {
+    width: 116px;
+}
 
 /* work-with-apps */
 
@@ -762,8 +870,69 @@ footer {
     }
 
     /* your-data */
+    .your-data {
+        padding: 100px 0;
+    }
+
+    .your-data-content {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 56px;
+    }
+
+    .your-data-info {
+        flex: 1 1 0;
+        align-items: flex-start;
+        max-width: 520px;
+    }
+
+    .your-data-title {
+        font-size: 56px;
+        line-height: 67px;
+        text-align: left;
+    }
+
+    .your-data-description {
+        text-align: left;
+    }
+
+    .your-data-img {
+        width: 50%;
+        max-width: 560px;
+    }
 
     /* sponsors */
+    .sponsors {
+        padding: 70px 0 100px;
+    }
+
+    .sponsors-title {
+        font-size: 56px;
+        line-height: 67px;
+        margin-bottom: 48px;
+    }
+
+    .sponsors-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+    }
+
+    .sponsors-logo-apple {
+        width: 48px;
+    }
+
+    .sponsors-logo-microsoft {
+        width: 240px;
+    }
+
+    .sponsors-logo-slack {
+        width: 230px;
+    }
+
+    .sponsors-logo-google {
+        width: 175px;
+    }
 
     /* work-with-apps */
 
