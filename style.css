@@ -61,6 +61,32 @@ header {
     display: none;
 }
 
+/* main-banner */
+
+/* project-management */
+
+/* work-together */
+
+/* use-extention */
+
+/* customise */
+
+/* choose-plan */
+
+/* work-everywere */
+
+/* your-data */
+
+/* sponsors */
+
+/* work-with-apps */
+
+/* clients */
+
+/* try-today */
+
+/* footer */
+
 @media (min-width: 1152px) {
     .container {
         margin: 0 2rem;
@@ -74,6 +100,32 @@ header {
     .try-btn {
         display: block;
     }
+
+    /* main-banner */
+
+    /* project-management */
+
+    /* work-together */
+
+    /* use-extention */
+
+    /* customise */
+
+    /* choose-plan */
+
+    /* work-everywere */
+
+    /* your-data */
+
+    /* sponsors */
+
+    /* work-with-apps */
+
+    /* clients */
+
+    /* try-today */
+
+    /* footer */
 }
 
 @media (min-width: 1920px) {
@@ -90,4 +142,30 @@ header {
     .header-droplists {
         display: flex;
     }
+
+    /* main-banner */
+
+    /* project-management */
+
+    /* work-together */
+
+    /* use-extention */
+
+    /* customise */
+
+    /* choose-plan */
+
+    /* work-everywere */
+
+    /* your-data */
+
+    /* sponsors */
+
+    /* work-with-apps */
+
+    /* clients */
+
+    /* try-today */
+
+    /* footer */
 }
