@@ -144,6 +144,14 @@ header {
     }
 
     /* main-banner */
+    .main-banner-content {
+        padding: 100px 0;
+    }
+
+    .main-banner-title {
+        font-size: 54px;
+        line-height: 65px;
+    }
 
     /* project-management */
 
