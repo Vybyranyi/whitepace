@@ -112,6 +112,49 @@ header {
 /* work-together */
 
 /* use-extention */
+.use-extention {
+        background-color: #043873;
+
+}
+.use-extention-content {
+       display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.use-extention-content-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.use-extention-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    color: #fff;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.use-extention-description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #fff;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.use-extention-btn {
+    display: block;
+}
+
+.use-extention-img {
+    width: 100%;
+    object-fit: cover;
+}
 
 /* customise */
 
@@ -173,7 +216,28 @@ header {
     /* work-together */
 
     /* use-extention */
+    .use-extention-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 145px 0;
+    }
 
+    .use-extention-title {
+        font-size: 64px;
+        line-height: 77px;
+        text-align: left;
+    }
+    .use-extention-description {
+        text-align: left;
+    }
+    use-extention-content-left {
+        align-items: flex-start;
+        margin-bottom: none;
+    }
+    .use-extention-img {
+        width: 50%;
+    }
     /* customise */
 
     /* choose-plan */
@@ -215,6 +279,16 @@ header {
     /* work-together */
 
     /* use-extention */
+    .use-extention-title {
+        font-size: 73px;
+        line-height: 80px;
+        text-align: left;
+    }
+    .use-extention-description {
+        font-size: 25px;
+        line-height: 35px;
+        text-align: left;
+    }
 
     /* customise */
 
